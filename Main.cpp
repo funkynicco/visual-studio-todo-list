@@ -129,29 +129,6 @@ int main( int argc, char* argv[] )
 {
     setbuf( stdout, NULL ); // Disable buffering
 
-#if 0
-    char oldDirectory[ MAX_PATH ];
-    if( !GetCurrentDirectory( sizeof( oldDirectory ), oldDirectory ) )
-    {
-        printf( "Could not receive current directory (code: %u).\n", GetLastError() );
-        return 1;
-    }
-
-    SetCurrentDirectory( "E:\\comment_test_prj" );
-
-    DoProcess();
-
-    SetCurrentDirectory( oldDirectory );
-
-    /*scanner.LoadFile( "E:\\comment_test.cpp" );
-    scanner.ScanComments( []( int line, const char* comment )
-    {
-    if( strstr( comment, "TODO" ) )
-    printf( "line(%d): '%s'\n", line, comment );
-    } );*/
-
-#else
-
     if( argc < 2 )
     {
         printf( "Must provide a directory to scan.\n" );
@@ -178,16 +155,9 @@ int main( int argc, char* argv[] )
         return 1;
     }
 
-    //printf( "Set directory: '%s'\n", newPath );
-
     DoProcess();
 
     SetCurrentDirectory( oldDirectory ); // reset command line
 
-    // TODO: Hang up the christmas tree
-
-#endif
-
-    //system( "pause" );
     return 0;
 }

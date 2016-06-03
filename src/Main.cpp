@@ -201,26 +201,7 @@ int DoSolution(const char* sln_filename)
 		printf("%s\n", prj->GetName().c_str());
 
 		DoProject(checked_files, prj->GetFilename().c_str());
-
-		/*
-		int num = 0;
-
-		vector<string>& files = prj->GetFiles();
-		for( vector<string>::iterator it2 = files.begin(); it2 != files.end(); ++it2 )
-		{
-			auto filename = *it2;
-			if( _strcmpi( filename.c_str(), "Properties\\AssemblyInfo.cs" ) != 0 )
-			{
-				printf( "    %s\n", filename.c_str() );
-				++num;
-			}
-		}
-
-		if( num == 0 )
-			printf( "[!] No files in this project.\n" );*/
 	}
-
-	//DoProject( checked_files, argv[ 2 ] );
 
 	system("pause");
 	return 0;

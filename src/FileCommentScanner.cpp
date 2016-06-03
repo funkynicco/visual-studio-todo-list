@@ -7,7 +7,6 @@ CFileCommentScanner::CFileCommentScanner()
 {
 	m_lpBuf = m_buffer;
 	m_lpEnd = m_buffer + sizeof(m_buffer);
-	//    m_lpCur = m_lpBuf;
 }
 
 CFileCommentScanner::~CFileCommentScanner()
@@ -31,8 +30,6 @@ BOOL CFileCommentScanner::LoadFile(const char* filename)
 		return FALSE;
 	}
 
-	//    m_lpCur = m_lpBuf; // reset
-
 	DWORD dwSize = (DWORD)li.QuadPart;
 	DWORD dwPos = 0;
 	DWORD dwRead;
@@ -45,7 +42,6 @@ BOOL CFileCommentScanner::LoadFile(const char* filename)
 			return FALSE;
 		}
 
-		//m_lpCur += dwRead;
 		dwPos += dwRead;
 	}
 
@@ -71,17 +67,8 @@ BOOL CFileCommentScanner::CheckBufferSize(size_t nSize)
 			return FALSE;
 		}
 
-		//size_t offset = m_lpCur - m_lpBuf;
-
 		m_lpBuf = (LPBYTE)block;
 		m_lpEnd = m_lpBuf + nSize;
-
-		/*
-		if( m_lpBuf + offset < m_lpEnd )
-		m_lpCur = m_lpBuf + offset;
-		else
-		m_lpCur = m_lpBuf;
-		*/
 	}
 
 	return TRUE;
@@ -106,7 +93,7 @@ int CFileCommentScanner::ScanComments(function<void(int line, const char* commen
 			{
 				++ptr;
 
-				comment = "";// .clear();
+				comment.clear();
 
 				while (ptr < end &&
 					*ptr != '\n')
@@ -131,7 +118,7 @@ int CFileCommentScanner::ScanComments(function<void(int line, const char* commen
 
 				int commentLines = 0;
 
-				comment = "";// .clear();
+				comment.clear();
 
 				while (ptr < end)
 				{

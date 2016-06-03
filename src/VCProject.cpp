@@ -26,8 +26,6 @@ CVCProject::~CVCProject()
 {
 }
 
-
-
 BOOL CVCProject::Open( const char* filename )
 {
     m_filename = filename;

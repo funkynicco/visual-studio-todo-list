@@ -13,29 +13,62 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{82ec4da8-c9ce-457c-963a-adb4d9979f52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\rapidxml">
+      <UniqueIdentifier>{f4cb3dfa-601b-444f-a490-5180645ba4f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Utilities.cpp">
+    <ClCompile Include="src\Utilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FileCommentScanner.cpp">
+    <ClCompile Include="src\FileCommentScanner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ResultList.cpp">
+    <ClCompile Include="src\ResultList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VCProject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VCSolution.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="StdAfx.h">
+    <ClInclude Include="src\StdAfx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FileCommentScanner.h">
+    <ClInclude Include="src\FileCommentScanner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ResultList.h">
+    <ClInclude Include="src\ResultList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VCProject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\rapidxml\rapidxml.hpp">
+      <Filter>Libraries\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\rapidxml\rapidxml_iterators.hpp">
+      <Filter>Libraries\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\rapidxml\rapidxml_print.hpp">
+      <Filter>Libraries\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\rapidxml\rapidxml_utils.hpp">
+      <Filter>Libraries\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VCSolution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
